@@ -57,7 +57,7 @@ export function Closing() {
             type="button"
             className="group inline-flex h-[3.25rem] cursor-pointer items-center gap-3 rounded-full bg-brass-bright pl-7 pr-2 text-[0.98rem] font-semibold text-field transition-[background-color,transform] duration-300 ease-[var(--ease-out)] hover:bg-brass-lift active:scale-[0.98]"
           >
-            Book a walkthrough
+            Connect with us
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-field text-brass-bright transition-transform duration-300 ease-[var(--ease-out)] group-hover:translate-x-0.5">
               <ArrowRight size={17} />
             </span>
@@ -76,14 +76,13 @@ export function Footer() {
           <div className="max-w-[24rem]">
             <Wordmark tone="field" />
             <p className="mt-5 text-[0.92rem] leading-[1.65] text-on-field-soft">
-              <Mark tone="field">Whistleblower</Mark> hotline, reporting inbox and case management, run by Thought Arbitrage Consulting.
+              <Mark tone="field">Whistleblower</Mark> hotline, reporting link and case management, run by Thought Arbitrage Consulting.
             </p>
           </div>
           <nav aria-label="Footer" className="grid grid-cols-2 gap-x-14 gap-y-1 text-[0.92rem]">
             <a href="#features" className="py-2 text-on-field-soft transition-colors hover:text-on-field">Features</a>
             <a href="#how-it-works" className="py-2 text-on-field-soft transition-colors hover:text-on-field">How it works</a>
             <a href="#safeguards" className="py-2 text-on-field-soft transition-colors hover:text-on-field">Safeguards</a>
-            <a href="#raise-a-concern" className="py-2 text-on-field-soft transition-colors hover:text-on-field">Raise a concern</a>
           </nav>
         </div>
         <p className="mt-14 border-t border-field-rule pt-6 text-[0.8rem] text-on-field-soft">

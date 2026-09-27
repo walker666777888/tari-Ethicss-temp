@@ -4,7 +4,7 @@ import * as m from "motion/react-m";
 import { useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef, type ReactNode } from "react";
 import { sampleCase } from "@/content/landing";
-import { Mail, Phone } from "./icons";
+import { LinkIcon, Phone } from "./icons";
 import { delay } from "./reveal";
 import { Mark } from "./Mark";
 
@@ -32,7 +32,7 @@ export function Channels() {
             style={delay(100)}
             className="text-pretty max-w-[36rem] self-end text-[1.06rem] leading-[1.7] text-ink-soft lg:col-span-5 lg:col-start-8"
           >
-            <Mark>Whistleblowers</Mark> report the way they are comfortable with: they call, or they write. Both
+            <Mark>Whistleblowers</Mark> report the way they are comfortable with: they call, or they use a secure reporting link. Both
             routes arrive in the same place, and neither one ever asks the <Mark>whistleblower</Mark> to sign up or
             log in.
           </p>
@@ -46,9 +46,9 @@ export function Channels() {
             d={0}
           />
           <Channel
-            icon={<Mail size={22} />}
-            lead="The inbox is read by a person and entered by hand."
-            body="Reports sent to your organisation's dedicated address are read by your compliance admin, who opens the case and keeps the original message as evidence."
+            icon={<LinkIcon size={22} />}
+            lead="The secure link takes a written report in private."
+            body="Your organisation's dedicated reporting link opens a private form. The submission goes straight to your compliance admin, who opens the case and keeps the original report as evidence."
             d={120}
           />
         </div>
@@ -82,7 +82,7 @@ export function Channels() {
           </div>
           <p data-reveal className="text-pretty mt-7 text-[1.06rem] leading-[1.7] text-ink-soft">
             Nothing becomes a case on its own. A named compliance admin reviews every call and every
-            email, then opens the case or links the call to one that already exists.
+            link submission, then opens the case or links the call to one that already exists.
           </p>
         </div>
       </div>

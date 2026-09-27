@@ -4,7 +4,7 @@ import * as m from "motion/react-m";
 import { useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { features, sampleCase } from "@/content/landing";
-import { Lock, Mail, Phone } from "./icons";
+import { LinkIcon, Lock, Phone } from "./icons";
 import { delay } from "./reveal";
 import { Mark } from "./Mark";
 
@@ -130,7 +130,7 @@ function Specimen({ kind }: { kind: string }) {
       return (
         <ul className="space-y-2.5 text-[0.82rem]">
           <SpecRow i={0} icon={<Phone size={16} />} label="Hotline" value="Call recorded" />
-          <SpecRow i={1} icon={<Mail size={16} />} label="Reporting inbox" value="Report received" />
+          <SpecRow i={1} icon={<LinkIcon size={16} />} label="Reporting link" value="Report received" />
           <li style={idx(2)} className="spec-line flex items-center justify-between border-t border-dashed border-rule pt-2.5 text-[0.76rem] text-ink-mute">
             <span>both routes</span>
             <span className="text-field">one register</span>

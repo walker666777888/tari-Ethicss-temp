@@ -24,7 +24,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "TARI Ethics | Whistleblower hotline and case management",
   description:
-    "TARI runs your whistleblower hotline and reporting inbox, and gives your compliance team one secure place to take every whistleblower report from first call to closure.",
+    "TARI runs your whistleblower hotline and secure reporting link, and gives your compliance team one secure place to take every whistleblower report from first call to closure.",
 };
 
 export const viewport: Viewport = {

@@ -46,12 +46,6 @@ export default function NotFound() {
               <ArrowRight size={17} />
             </span>
           </Link>
-          <Link
-            href="/#raise-a-concern"
-            className="py-2 text-[0.98rem] font-medium text-ink underline decoration-rule-strong transition-[text-decoration-color] duration-200 hover:decoration-ink"
-          >
-            Need to raise a concern?
-          </Link>
         </div>
       </div>
     </main>

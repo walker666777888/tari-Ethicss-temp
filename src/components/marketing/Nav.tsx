@@ -18,7 +18,7 @@ export function Nav() {
 
   // Scroll spy: the section crossing the middle band of the viewport owns the nav rule.
   useEffect(() => {
-    const ids = [...nav.map((n) => n.href.slice(1)), "raise-a-concern"];
+    const ids = nav.map((n) => n.href.slice(1));
     const els = ids.map((id) => document.getElementById(id)).filter((el): el is HTMLElement => !!el);
     const io = new IntersectionObserver(
       (entries) => {
@@ -107,13 +107,6 @@ export function Nav() {
               {item.label}
             </a>
           ))}
-          <a
-            href="#raise-a-concern"
-            aria-current={active === "raise-a-concern" ? "location" : undefined}
-            className="text-[0.92rem] font-medium text-brass-ink transition-colors duration-200 hover:text-ink"
-          >
-            Raise a concern
-          </a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -121,7 +114,7 @@ export function Nav() {
             type="button"
             className="hidden h-10 cursor-pointer items-center rounded-full border border-rule-strong px-5 text-[0.9rem] font-medium text-ink transition-[background-color,border-color] duration-200 hover:border-ink hover:bg-sheet sm:inline-flex"
           >
-            Staff login
+            Login
           </button>
           <button
             type="button"
@@ -143,7 +136,7 @@ export function Nav() {
         className="menu-sheet absolute inset-x-0 top-full border-t border-rule bg-paper px-5 pb-8 pt-4 shadow-[0_24px_40px_-24px_rgba(11,31,24,0.35)] lg:hidden"
       >
         <nav aria-label="Mobile" className="flex flex-col">
-          {[...nav, { href: "#raise-a-concern", label: "Raise a concern" }].map((item, i) => (
+          {nav.map((item, i) => (
             <a
               key={item.href}
               href={item.href}
@@ -160,7 +153,7 @@ export function Nav() {
           style={{ "--i": nav.length + 1 } as CSSProperties}
           className="menu-item mt-6 inline-flex h-12 w-full cursor-pointer items-center justify-center rounded-full border border-rule-strong text-[0.95rem] font-medium text-ink"
         >
-          Staff login
+          Login
         </button>
       </div>
     </header>

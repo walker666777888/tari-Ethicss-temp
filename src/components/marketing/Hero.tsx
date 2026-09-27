@@ -1,9 +1,9 @@
 import { certification } from "@/content/landing";
 import { CaseDocket } from "./CaseDocket";
-import { ArrowRight } from "./icons";
 import { Rosette } from "./Rosette";
 import { delay } from "./reveal";
 import { Mark } from "./Mark";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 export function Hero() {
   return (
@@ -28,7 +28,7 @@ export function Hero() {
             style={delay(520)}
             className="text-pretty max-w-[34rem] text-[1.08rem] leading-[1.65] text-ink-soft sm:text-[1.18rem]"
           >
-            TARI runs your organisation&apos;s <Mark>whistleblower</Mark> hotline and reporting inbox, and gives
+            TARI runs your organisation&apos;s <Mark>whistleblower</Mark> hotline and secure reporting link, and gives
             your compliance team one secure place to take each report from first call to closure.
           </p>
 
@@ -37,21 +37,7 @@ export function Hero() {
             style={delay(640)}
             className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4"
           >
-            <button
-              type="button"
-              className="group inline-flex h-[3.25rem] cursor-pointer items-center gap-3 rounded-full bg-field pl-7 pr-2 text-[0.98rem] font-medium text-on-field shadow-[0_12px_24px_-12px_rgba(13,59,46,0.6)] transition-[background-color,transform,box-shadow] duration-300 ease-[var(--ease-out)] hover:bg-field-raise hover:shadow-[0_16px_30px_-12px_rgba(13,59,46,0.65)] active:scale-[0.98]"
-            >
-              Book a walkthrough
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brass-bright text-field transition-transform duration-300 ease-[var(--ease-out)] group-hover:translate-x-0.5">
-                <ArrowRight size={17} />
-              </span>
-            </button>
-            <a
-              href="#raise-a-concern"
-              className="inline-flex items-center gap-2 py-2 text-[0.98rem] font-medium text-ink underline decoration-rule-strong transition-[text-decoration-color] duration-200 hover:decoration-ink"
-            >
-              Need to raise a concern?
-            </a>
+            <ShinyButton label="Connect with us" />
           </div>
 
           <ul
@@ -60,7 +46,7 @@ export function Hero() {
             className="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-rule pt-6 text-[0.86rem] text-ink-soft"
           >
             <li><span className="font-semibold text-ink">Whistleblower</span> hotline, India</li>
-            <li>Dedicated reporting inbox</li>
+            <li>Dedicated reporting link</li>
             {certification.show && <li>{certification.name} audited</li>}
           </ul>
           {/* Unlayered .registry-stamp sets display, so visibility lives on a wrapper. */}

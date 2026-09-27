@@ -4,8 +4,8 @@ export const contact = {
   // PLACEHOLDER: replace with the real published hotline number.
   hotline: "+91 00000 00000",
   hotlineHref: "tel:+910000000000",
-  // PLACEHOLDER: each client organisation gets its own reporting address.
-  reportingEmail: "ethics@yourorganisation.example",
+  // PLACEHOLDER: each client organisation gets its own reporting link.
+  reportingLink: "https://report.yourorganisation.example",
   isPlaceholder: true,
 };
 
@@ -62,7 +62,7 @@ export const stages: Stage[] = [
   {
     status: "New",
     title: "A report becomes a case",
-    body: "A compliance admin reviews the call or email and opens a case with its source, category, severity and department. It receives a permanent number that never changes.",
+    body: "A compliance admin reviews the call or link submission and opens a case with its source, category, severity and department. It receives a permanent number that never changes.",
     who: "Compliance admin",
     log: [
       { time: "10:42:07", action: "call.received", detail: "Hotline call, 6:12" },
@@ -143,8 +143,8 @@ export const safeguards = [
 ];
 export const nextSteps = [
   {
-    title: "You call or write",
-    body: "An investigator answers the hotline, or you can leave a message. Calls are recorded so your account is kept exactly as you gave it.",
+    title: "You call or use the link",
+    body: "An investigator answers the hotline, or you can leave a message. You can also submit a written report through your secure link. Calls are recorded so your account is kept exactly as you gave it.",
   },
   {
     title: "The compliance team reviews it",
@@ -163,12 +163,12 @@ export const features: Feature[] = [
   {
     key: "intake",
     title: "Secure Intake Channels",
-    body: "A published hotline and a dedicated reporting inbox for each organisation. Every call is recorded, and every report ends up in one place.",
+    body: "A published hotline and a dedicated reporting link for each organisation. Every call is recorded, and every report ends up in one place.",
   },
   {
     key: "triage",
     title: "Automated Case Triage",
-    body: "Calls are captured the moment they end, queued for review, and your compliance admin is notified by email. Nothing is lost between the call and the case.",
+    body: "Calls are captured the moment they end, queued for review, and your compliance admin is notified straight away. Nothing is lost between the call and the case.",
   },
   {
     key: "correspondence",
