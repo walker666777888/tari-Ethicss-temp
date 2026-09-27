@@ -54,7 +54,9 @@ export function Closing() {
         </p>
         <div data-reveal style={delay(200)} className="mt-11 flex justify-center">
           <a
-            href={`mailto:${contact.connectEmail}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${contact.connectEmail}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex h-[3.25rem] cursor-pointer items-center gap-3 rounded-full bg-brass-bright pl-7 pr-2 text-[0.98rem] font-semibold text-field transition-[background-color,transform] duration-300 ease-[var(--ease-out)] hover:bg-brass-lift active:scale-[0.98]"
           >
             Connect with us

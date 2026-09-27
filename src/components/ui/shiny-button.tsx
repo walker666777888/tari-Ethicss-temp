@@ -27,6 +27,7 @@ function usePrefersReducedMotion() {
 interface ShinyButtonProps {
   label?: string;
   href?: string;
+  newTab?: boolean;
   onClick?: () => void;
   className?: string;
   fillColor?: string;
@@ -49,6 +50,7 @@ interface ShinyButtonProps {
 export function ShinyButton({
   label = "Get Started",
   href,
+  newTab = false,
   onClick,
   className = "",
   fillColor = "#15533f",
@@ -253,7 +255,9 @@ export function ShinyButton({
     <>
       <style>{css}</style>
       <Tag
-        {...(href ? { href } : { type: "button" as const })}
+        {...(href
+          ? { href, ...(newTab && { target: "_blank", rel: "noopener noreferrer" }) }
+          : { type: "button" as const })}
         className={`${scope} ${className}`}
         onClick={onClick}
         data-reduced-motion={reducedMotion ? "true" : undefined}

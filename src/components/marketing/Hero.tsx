@@ -38,7 +38,7 @@ export function Hero() {
             style={delay(640)}
             className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4"
           >
-            <ShinyButton label="Connect with us" href={`mailto:${contact.connectEmail}`} />
+            <ShinyButton label="Connect with us" href={`https://mail.google.com/mail/?view=cm&fs=1&to=${contact.connectEmail}`} newTab />
           </div>
 
           <ul
