@@ -1,6 +1,8 @@
 // All landing page copy and facts live here so real values can replace placeholders in one place.
 
 export const contact = {
+  // Where the "Connect with us" buttons send enquiries.
+  connectEmail: "prachi.dutta@tari.co.in",
   // PLACEHOLDER: replace with the real published hotline number.
   hotline: "+91 00000 00000",
   hotlineHref: "tel:+910000000000",

@@ -1,4 +1,4 @@
-import { clientLogos, stats } from "@/content/landing";
+import { clientLogos, contact, stats } from "@/content/landing";
 import { ArrowRight } from "./icons";
 import { delay } from "./reveal";
 import { Rosette } from "./Rosette";
@@ -53,15 +53,15 @@ export function Closing() {
           See a report travel from a phone call to a closed case, and who can see it at every step.
         </p>
         <div data-reveal style={delay(200)} className="mt-11 flex justify-center">
-          <button
-            type="button"
+          <a
+            href={`mailto:${contact.connectEmail}`}
             className="group inline-flex h-[3.25rem] cursor-pointer items-center gap-3 rounded-full bg-brass-bright pl-7 pr-2 text-[0.98rem] font-semibold text-field transition-[background-color,transform] duration-300 ease-[var(--ease-out)] hover:bg-brass-lift active:scale-[0.98]"
           >
             Connect with us
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-field text-brass-bright transition-transform duration-300 ease-[var(--ease-out)] group-hover:translate-x-0.5">
               <ArrowRight size={17} />
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

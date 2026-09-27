@@ -4,6 +4,7 @@ import { Rosette } from "./Rosette";
 import { delay } from "./reveal";
 import { Mark } from "./Mark";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { contact } from "@/content/landing";
 
 export function Hero() {
   return (
@@ -37,7 +38,7 @@ export function Hero() {
             style={delay(640)}
             className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4"
           >
-            <ShinyButton label="Connect with us" />
+            <ShinyButton label="Connect with us" href={`mailto:${contact.connectEmail}`} />
           </div>
 
           <ul

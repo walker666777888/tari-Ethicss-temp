@@ -26,6 +26,7 @@ function usePrefersReducedMotion() {
 
 interface ShinyButtonProps {
   label?: string;
+  href?: string;
   onClick?: () => void;
   className?: string;
   fillColor?: string;
@@ -47,6 +48,7 @@ interface ShinyButtonProps {
 // Defaults use the site's green palette: deep field-green fill with an emerald sweep.
 export function ShinyButton({
   label = "Get Started",
+  href,
   onClick,
   className = "",
   fillColor = "#15533f",
@@ -67,6 +69,7 @@ export function ShinyButton({
   const reducedMotion = usePrefersReducedMotion();
   const instanceId = useId().replace(/[^a-zA-Z0-9]/g, "");
   const scope = `gleam-edge-${instanceId}`;
+  const Tag = href ? "a" : "button";
 
   const css = `
     @property --gradient-angle-${instanceId} { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
@@ -249,8 +252,8 @@ export function ShinyButton({
   return (
     <>
       <style>{css}</style>
-      <button
-        type="button"
+      <Tag
+        {...(href ? { href } : { type: "button" as const })}
         className={`${scope} ${className}`}
         onClick={onClick}
         data-reduced-motion={reducedMotion ? "true" : undefined}
@@ -264,7 +267,7 @@ export function ShinyButton({
             </svg>
           </span>
         )}
-      </button>
+      </Tag>
     </>
   );
 }
